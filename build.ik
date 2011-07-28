@@ -1,5 +1,5 @@
-;base = "/var/www/flaviusb.net/htdocs/"
-base = "./"
+base = "/var/www/flaviusb.net/htdocs/"
+;base = "./"
 GenX baseURI = "http://flaviusb.net/"
 atom_data = {
   entries: [
