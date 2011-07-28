@@ -1,0 +1,52 @@
+header, footer, aside, nav, article {
+  display: block;
+}
+
+.pipevar { color: #6a5acd }
+.prevar { color: #008b8b }
+.comment { color: #0000ff }
+a { color: #000000; text-decoration: none; }
+.string, .string a { color: #ff00ff; text-decoration: none; }
+a:hover { text-decoration: underline; color: blue;}
+.escape, .escape a { color: #6a5acd;  }
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+}
+
+ul.posts span, ul.posts span a {
+  color: #aaa;
+  font-size: 80%;
+}
+
+.sidebox { float: right; }
+
+.sidebox a, .grey {
+  width: 75px;
+  height: 75px;
+  font-size: 3em;
+  border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; 
+  border: 1px solid #CCC;
+  line-height:75px;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+.sidebox a {
+  color: #333;
+  background: #d5d5d5;
+  text-decoration: none;
+}
+.grey {
+  color: #bbb;
+  background: #ddd;
+}
+.sidebox a:hover {
+  background: #aaa;
+  text-decoration: none;
+}
