@@ -21,3 +21,6 @@ nomod = {
 GenX build(base: base,
   (atom_data => "atom.xml")     => "atom.ik",
   (index_data => "index.html")  => "index.ik")
+
+GenX deployRaw(base: base,
+  "style.css", "syntax.css", "favicon.png")
