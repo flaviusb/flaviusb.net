@@ -1,0 +1,55 @@
+<div class="highlight"><pre><span class="c">#!/usr/bin/env ioke</span>
+
+<span class="c">;; Existence before essence</span>
+<span class="nv">flaviusb</span> <span class="o">=</span> <span class="p">&#39;(</span><span class="nc">Flaviusb</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="sx">handle:</span> <span class="ss">:flaviusb</span><span class="p">,</span>
+  <span class="sx">name:</span>   <span class="s">&quot;Justin Marsh&quot;</span><span class="p">,</span>
+  <span class="sx">about:</span>  <span class="s">&quot;http://flaviusb.net/about&quot;</span><span class="p">,</span>
+  <span class="sx">writing:</span> <span class="p">{</span>
+    <span class="ss">:blog</span>    <span class="o">=&gt;</span> <span class="s">&quot;http://flaviusb.net/blog&quot;</span><span class="p">,</span>
+    <span class="ss">:twitter</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s">&quot;@flaviusb&quot;</span><span class="p">,</span> <span class="s">&quot;http://flaviusb.net/tweets/&quot;</span><span class="p">],</span>
+    <span class="ss">:other</span>   <span class="o">=&gt;</span> <span class="s">&quot;http://flaviusb.net/other/&quot;</span>
+  <span class="p">},</span>
+  <span class="sx">projects:</span> <span class="p">[</span>
+    <span class="nc">Code</span> <span class="o">$</span><span class="p">(</span><span class="sx">name:</span> <span class="s">&quot;Byeloblog&quot;</span><span class="p">,</span> <span class="sx">repo:</span> <span class="s">&quot;https://github.com/flaviusb/Byeloblog&quot;</span><span class="p">,</span> <span class="sx">description:</span> <span class="s">&quot;A static site generator in Ioke&quot;</span><span class="p">,</span> <span class="sx">website:</span> <span class="s">&quot;http://byeloblog.net&quot;</span><span class="p">),</span>
+    <span class="nc">Code</span> <span class="o">$</span><span class="p">(</span><span class="sx">name:</span> <span class="s">&quot;OpenCell&quot;</span><span class="p">,</span> <span class="sx">repo:</span> <span class="s">&quot;http://cellml-opencell.hg.sourceforge.net/hgweb/cellml-opencell/cellml-opencell&quot;</span><span class="p">,</span> <span class="sx">description:</span> <span class="s">&quot;A CellML Simulation and Editing environment&quot;</span><span class="p">,</span> <span class="sx">website:</span> <span class="s">&quot;http://opencell.org&quot;</span><span class="p">),</span>
+    <span class="nc">Larp</span> <span class="o">$</span><span class="p">(</span><span class="sx">name:</span> <span class="s">&quot;Nexus&quot;</span><span class="p">,</span> <span class="sx">system:</span> <span class="s">&quot;Storytelling&quot;</span><span class="p">,</span> <span class="sx">venue:</span> <span class="s">&quot;Mage: The Awakening&quot;</span><span class="p">,</span> <span class="sx">website:</span> <span class="s">&quot;http://nexus.gen.nz&quot;</span><span class="p">),</span>
+  <span class="p">]</span>
+<span class="p">))</span>
+<span class="c">;; Types of project</span>
+<span class="ni">Project</span> <span class="o">=</span> <span class="nb">Origin</span> <span class="k">mimic</span> <span class="kr">do</span><span class="p">(</span>
+  <span class="nv">whitelist</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="o">$</span> <span class="o">=</span> <span class="nf">method</span><span class="p">(</span><span class="sd">&quot;Lazy way to initialise a new project of the specified type&quot;</span><span class="p">,</span>
+    <span class="o">+</span><span class="ss">:slurp</span><span class="p">,</span>
+    <span class="n">slurp</span> <span class="n">each</span><span class="p">(</span><span class="n">kv</span><span class="p">,</span> <span class="p">(@</span><span class="n">whitelist</span> <span class="n">include?</span><span class="p">(</span><span class="n">kv</span> <span class="n">key</span><span class="p">))</span> <span class="n">ifTrue</span><span class="p">(@</span><span class="k">cell</span><span class="p">(</span><span class="n">kv</span> <span class="n">key</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">kv</span> <span class="n">value</span><span class="p">))))</span>
+<span class="p">)</span>
+<span class="nv">Code</span> <span class="o">=</span> <span class="nc">Project</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="sx">whitelist:</span> <span class="p">[</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:repo</span><span class="p">,</span> <span class="ss">:description</span><span class="p">,</span> <span class="ss">:website</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nv">Larp</span> <span class="o">=</span> <span class="nc">Project</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="sx">whitelist:</span> <span class="p">[</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:system</span><span class="p">,</span> <span class="ss">:venue</span><span class="p">,</span> <span class="ss">:website</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c">;; Aspects of me</span>
+<span class="ni">Programmer</span>  <span class="o">=</span> <span class="nb">Origin</span> <span class="k">mimic</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="sx">languages:</span> <span class="p">{</span>
+    <span class="sx">comfortable:</span> <span class="o">#</span><span class="p">{</span><span class="nc">JavaScript</span><span class="p">,</span> <span class="nc">Lisp</span><span class="p">,</span> <span class="nc">Scala</span><span class="p">,</span> <span class="nc">Ioke</span><span class="p">,</span> <span class="nc">C</span><span class="p">,</span> <span class="nc">Ruby</span><span class="p">,</span> <span class="nc">OCaml</span><span class="p">},</span>
+    <span class="sx">occasional:</span>  <span class="o">#</span><span class="p">{</span><span class="nc">Shell</span><span class="p">,</span> <span class="nc">Python</span><span class="p">,</span> <span class="nc">Matlab</span><span class="p">,</span> <span class="nc">C</span><span class="o">++</span><span class="p">,</span> <span class="nc">Smalltalk</span><span class="p">,</span> <span class="nc">Makefile</span><span class="p">,</span> <span class="nc">Perl</span><span class="p">,</span> <span class="nc">Vimscript</span><span class="p">}</span>
+  <span class="p">}</span>  
+<span class="p">)</span>
+<span class="ni">Raver</span>       <span class="o">=</span> <span class="nb">Origin</span> <span class="k">mimic</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="sx">music:</span> <span class="o">#</span><span class="p">{</span><span class="nc">ProgHouse</span><span class="p">,</span> <span class="nc">HardHouse</span><span class="p">,</span> <span class="nc">DubStep</span><span class="p">},</span>
+  <span class="sx">style:</span> <span class="o">#</span><span class="p">{</span><span class="nc">TekMaTek</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="ni">Philosopher</span> <span class="o">=</span> <span class="nb">Origin</span> <span class="k">mimic</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="sx">school:</span> <span class="o">#</span><span class="p">{</span><span class="nc">FormalLogic</span><span class="p">,</span> <span class="nc">Analytic</span><span class="p">,</span> <span class="nc">BayesianRationalist</span><span class="p">},</span>
+  <span class="sx">ethic:</span>  <span class="o">#</span><span class="p">{</span><span class="nc">NeoNicomachean</span><span class="p">,</span> <span class="nc">Kantian</span><span class="p">,</span> <span class="nc">RuleUtilitarian</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c">;; I am a Philosopher by education, a Programmer by inclination, and a Raver by accident</span>
+<span class="nv">Flaviusb</span>    <span class="o">=</span> <span class="nc">Philosopher</span> <span class="kr">with</span><span class="p">(</span>
+  <span class="k">mimic!</span><span class="p">(</span><span class="nc">Programmer</span><span class="p">)</span> <span class="p">.</span> <span class="k">mimic!</span><span class="p">(</span><span class="nc">Raver</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="c">;; I am that which I become</span>
+<span class="n">flaviusb</span> <span class="k">become!</span><span class="p">(</span><span class="n">flaviusb</span> <span class="n">evaluateOn</span><span class="p">(</span><span class="n">call</span> <span class="nb">Ground</span><span class="p">))</span>
+</pre></div>
