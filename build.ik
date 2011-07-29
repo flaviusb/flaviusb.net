@@ -10,6 +10,11 @@ atom_data = {
   updated: "just now",
   modified: ""
 }
+about_data = {
+  title: "Describe :flaviusb",
+  modified: "",
+  content: GenX fromMD("about.md")
+}
 index_data = {
   title:    "inspect(:flaviusb)",
   content:  FileSystem readFully("index.in.html"),
@@ -19,8 +24,9 @@ nomod = {
   modified: ""
 }
 GenX build(base: base,
-  (atom_data => "atom.xml")     => "atom.ik",
-  (index_data => "index.html")  => "index.ik")
+  (atom_data  => "atom.xml")    => "atom.ik",
+  (index_data => "index.html")  => "index.ik",
+  (about_data => "about.html")  => "container.ik")
 
 GenX deployRaw(base: base,
   "style.css", "syntax.css", "favicon.png")
