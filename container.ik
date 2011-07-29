@@ -13,7 +13,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("#{`base}style.css")
   `style("#{`base}syntax.css")
   `style("#{`base}container.css")
-  `style("#{`base}moo.css")
+  `style("#{`base}mono.css")
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
   link(rel: "shortcut icon", href: "#{`base}favicon.png", type: "image/png"))
   (body
