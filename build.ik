@@ -15,6 +15,11 @@ about_data = {
   modified: "",
   content: GenX fromMD("about.md")
 }
+other_data = {
+  title: "Other works",
+  modified: "",
+  content: GenX fromMD("other.md")
+}
 index_in  = FileSystem readFully("index.in.html")
 link = fn(href, #[&quot;<a href="#{href[6...-6]}">#{href[6...-6]}</a>&quot;])
 strings = #/&quot;https?:\/\/[^&]*&quot;/ allMatches(index_in)
