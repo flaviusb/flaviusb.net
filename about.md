@@ -1,13 +1,13 @@
 About Justin
 ============
 
-<span class="vcard">
-<span class="fn">Justin Marsh</span> is presently enjoying [programming](http://github.com/flaviusb), [larp](http://nexus.gen.nz) and electronic music.
+<div class="vcard">
+<div class="fn">Justin Marsh</div> is presently enjoying [programming](http://github.com/flaviusb), [larp](http://nexus.gen.nz) and electronic music.
 He has some strong opinions, which he will get around to blogging about eventually.
-He is a <span class="role">programmer</span>.
-His usual handle is <span class="nickname">flaviusb</span>.
-He lives in <span class="adr"><span class="locality">Auckland</span>, <span class="country-name">New Zealand</span></span>.
+He is a <div class="role">programmer</div>.
+His usual handle is <div class="nickname">flaviusb</div>.
+He lives in <div class="adr"><div class="locality">Auckland</div>, <div class="country-name">New Zealand</div></div>.
 
 
 <a class="url" href="http://flaviusb.net">Home</a>   |   <a href="http://flaviusb.net/blog">Blog</a>   |   <a href="http://github.com/flaviusb">Code</a>
-</span>
+</div>
