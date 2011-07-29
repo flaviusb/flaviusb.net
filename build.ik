@@ -25,7 +25,7 @@ link = fn(href, #[&quot;<a href="#{href[6...-6]}">#{href[6...-6]}</a>&quot;])
 strings = #/&quot;https?:\/\/[^&]*&quot;/ allMatches(index_in)
 strings each(rep, index_in = index_in replace(rep, link(rep)))
 strings = #/&quot;@[a-zA-Z0-9]*&quot;/ allMatches(index_in)
-strings each(rep, index_in = index_in replace(rep, #[&quot;<a href="twitter.com/#{rep[7...-6]}">#{rep[6...-6]}</a>&quot;]))
+strings each(rep, index_in = index_in replace(rep, #[&quot;<a href="http://twitter.com/#{rep[7...-6]}">#{rep[6...-6]}</a>&quot;]))
 index_data = {
   title:    "inspect(:flaviusb)",
   content:  index_in,
