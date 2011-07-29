@@ -29,4 +29,4 @@ GenX build(base: base,
   (about_data => "about.html")  => "container.ik")
 
 GenX deployRaw(base: base,
-  "style.css", "syntax.css", "favicon.png")
+  "*.css", "favicon.png")
