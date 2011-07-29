@@ -34,7 +34,7 @@ Larp = Project with(
 Programmer  = Origin mimic with(
   languages: {
     comfortable: #{JavaScript, Lisp, Scala, Ioke, C, Ruby, OCaml},
-    occasional:  #{Shell, Python, Matlab, C++, Smalltalk, Makefile, Perl, Vimscript}
+    occasional:  #{Shell, Python, Matlab, cell(:"C++"), Smalltalk, Makefile, Perl, Vimscript}
   }  
 )
 Raver       = Origin mimic with(
