@@ -40,5 +40,50 @@ GenX build(base: base,
   (about_data => "about.html")  => "container.ik",
   (other_data => "other.html")  => "container.ik")
 
+; Deploy assets
 GenX deployRaw(base: base,
   "*.css", "favicon.png")
+
+; Generate blog posts
+
+blog_data = {
+  title:    "inspect(:flaviusb)"
+}
+simple_ini_parser = method(ini,
+  let(ret, {},
+    lines = ini split("\n")
+    state = :kv ; states can be :kv, :list
+    currkey = null
+    acc = []
+    lines each(line,
+      if(state == :kv,
+        if(#/^([^:]*):\s*(\S.*)$/ =~ line,
+          (k, v) = it captures
+          ret[k] = v,
+          if(#/^([^:]*):\s*$/ =~ line,
+            state = :list
+            currkey = it captures[0]
+            acc = [])),
+        if(state = :list,
+          if(#/^- (.*)$/ =~ line,
+            acc push!(it captures[0]),
+            state = :kv
+            ret[currkey] = acc
+            currkey = nil
+            acc = [])
+        )
+      )
+    )
+  return ret)
+)
+posts = FileSystem [ "_posts/*.md" ]
+slugs = posts map(post,
+  preslug = #/_posts\/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md/ match(post) captures
+  slug = (preslug[0...-1] join("/")) + "/#{preslug[-1]}.html"
+  full = FileSystem readFully(post)
+  (prelude, precontent) = (#/\A---$(.*?)^---$(.*)\z/m =~ full) captures
+  content = GenX fromMDText(precontent)
+  lude = simple_ini_parser(prelude)
+  lude[:content] = content
+  {slug: slug, passthrough: lude})
+slugs each(slug, GenX build(base: base + "blog/", ((blog_data + slug[:passthrough]) => slug[:slug]) => "post.ik"))
