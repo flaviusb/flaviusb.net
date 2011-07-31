@@ -14,9 +14,9 @@ taglist = dsyntax("Add in a taglist",
     ''(''(`basecase)),
     nil)
 )
-entry = dsyntax("Add a blog index entry",
+entry = dmacro("Add a blog index entry",
   [>date, >url, >title, >tags]
-  ''(''(li
+  ''(li
           (span "#{`date}")
           " » "
           (a(href: "#{`url}") "#{`title}")
