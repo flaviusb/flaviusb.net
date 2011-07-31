@@ -77,7 +77,7 @@ simple_ini_parser = method(ini,
   return ret)
 )
 posts = FileSystem [ "_posts/*.md" ]
-slugs = posts map(post,
+posts each(post,
   preslug = #/_posts\/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md/ match(post) captures
   slug = (preslug[0...-1] join("/")) + "/#{preslug[-1]}.html"
   full = FileSystem readFully(post)
@@ -85,5 +85,4 @@ slugs = posts map(post,
   content = GenX fromMDText(precontent)
   lude = simple_ini_parser(prelude)
   lude[:content] = content
-  {slug: slug, passthrough: lude})
-slugs each(slug, GenX build(base: base + "blog/", ((blog_data + slug[:passthrough]) => slug[:slug]) => "post.ik"))
+  GenX build(base: base + "blog/", (lude => slug) => "post.ik"))
