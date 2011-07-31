@@ -83,7 +83,7 @@ posts each(post,
   slug = (preslug[0...-1] join("/")) + "/#{preslug[-1]}.html"
   "Slug is: #{slug}" println
   full = FileSystem readFully(post)
-  (prelude, precontent) = (#/\A---$^(.*?)$^---$^(.*)\z/m =~ full) captures
+  (prelude, precontent) = (#/\A---\n(.*?)\n---\n(.*)\z/m =~ full) captures
   "Prelude is:" println
   prelude println
   content = GenX fromMDText(precontent)
