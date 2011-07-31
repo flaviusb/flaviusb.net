@@ -50,31 +50,38 @@ blog_data = {
   title:    "inspect(:flaviusb)"
 }
 simple_ini_parser = method(ini,
-  let(ret, {},
-    lines = ini split("\n")
-    state = :kv ; states can be :kv, :list
-    currkey = null
-    acc = []
-    lines each(line,
-      if(state == :kv,
-        if(#/^([^:]*):\s*(\S.*)$/ =~ line,
-          (k, v) = it captures
-          ret[k] = v,
-          if(#/^([^:]*):\s*$/ =~ line,
-            state = :list
-            currkey = it captures[0]
-            acc = [])),
-        if(state = :list,
-          if(#/^- (.*)$/ =~ line,
-            acc push!(it captures[0]),
-            state = :kv
-            ret[currkey] = acc
-            currkey = nil
-            acc = [])
-        )
+  ret = {}
+  lines = ini split("\n")
+  state = :kv ; states can be :kv, :list
+  currkey = nil
+  acc = []
+  lines each(line,
+    if(state == :kv,
+      if(#/^([^:]*):\s*(\S.*)$/ =~ line,
+        (k, v) = it captures
+        ret[k] = v,
+        if(#/^([^:]*):\s*$/ =~ line,
+          state = :list
+          currkey = it captures[0]
+          acc = [])
+      ),
+      if(state == :list,
+        if(#/^- (.*)$/ =~ line,
+          ;"Adding #{it captures[0]} to #{acc}" println
+          acc push!(it captures[0]),
+          state = :kv
+          ret[currkey] = acc
+          currkey = nil
+          acc = []
+          if(#/^([^:]*):\s*(\S.*)$/ =~ line,
+            (k, v) = it captures
+            ret[k] = v))
       )
     )
-  return ret)
+  )
+  if(state == :list && acc != [] && currkey != nil,
+    ret[currkey] = acc)
+  return ret
 )
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
@@ -86,10 +93,10 @@ posts each(post,
   (prelude, precontent) = (#/\A---\n(.*?)\n---\n(.*)\z/m =~ full) captures
   "Prelude is:" println
   prelude println
-  content = GenX fromMDText(precontent)
-  "Generated Markdown content" println
   lude = simple_ini_parser(prelude)
   "Parsed prelude as #{lude}" println
+  content = GenX fromMDText(precontent)
+  "Generated Markdown content" println
   lude[:content] = content
   "Building blog post: #{post}" println
   GenX build(base: base + "blog/", (lude => slug) => "post.ik"))
