@@ -8,19 +8,19 @@ taglist = dsyntax("Add in a taglist",
   basecase = nil
   tags each(tag, 
     if(basecase == nil,
-      basecase = ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &nbsp; "),
-      basecase last -> ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &nbsp; ")))
+      basecase = ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &#160; "),
+      basecase last -> ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &#160; ")))
   if(basecase != nil, 
     ''(''(`basecase)),
     nil)
 )
 entry = dsyntax("Add a blog index entry",
-  [>date, >url, >title, >tags]
+  [>date, url, >title, >tags]
   ''(''(li
           (span "#{`date}")
           " » "
           (a(href: `url) "#{`title}")
-          " &nbsp; &nbsp; "
+          " &#160; &#160; "
           span `taglist(tags)))
 )
 entries = dsyntax("Map entries data to entries",
