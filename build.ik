@@ -59,7 +59,7 @@ simple_ini_parser = method(ini,
     if(state == :kv,
       if(#/^([^:]*):\s*(\S.*)$/ =~ line,
         (k, v) = it captures
-        ret[k] = v,
+        ret[:(k)] = v,
         if(#/^([^:]*):\s*$/ =~ line,
           state = :list
           currkey = it captures[0]
@@ -70,17 +70,17 @@ simple_ini_parser = method(ini,
           ;"Adding #{it captures[0]} to #{acc}" println
           acc push!(it captures[0]),
           state = :kv
-          ret[currkey] = acc
+          ret[:(currkey)] = acc
           currkey = nil
           acc = []
           if(#/^([^:]*):\s*(\S.*)$/ =~ line,
             (k, v) = it captures
-            ret[k] = v))
+            ret[:(k)] = v))
       )
     )
   )
   if(state == :list && acc != [] && currkey != nil,
-    ret[currkey] = acc)
+    ret[:(currkey)] = acc)
   return ret
 )
 posts = FileSystem [ "_posts/*.md" ]
