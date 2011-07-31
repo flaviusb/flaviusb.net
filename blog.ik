@@ -21,7 +21,7 @@ entry = dsyntax("Add a blog index entry",
           " &raquo; "
           (a(href: `url) "#{`title}")
           " &nbsp; &nbsp; "
-          span `taglist(`tags)))
+          span `taglist(tags)))
 )
 entries = dsyntax("Map entries data to entries",
   [>theentries]
@@ -37,7 +37,7 @@ entries = dsyntax("Map entries data to entries",
 `doctype("xml")
 `doctype("xhtml")
 html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
-  title "cell(":flaviusb") blog entryNames"
+  title "cell(\":flaviusb\") blog entryNames"
   meta(charset: "utf-8")
   `style("#{`base}reset.css")
   `style("#{`base}style.css")
