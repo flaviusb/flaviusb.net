@@ -1,6 +1,12 @@
 base = "/var/www/flaviusb.net/htdocs/"
 ;base = "./"
 GenX baseURI = "http://flaviusb.net/"
+fileModified = method("Shell out to get file modification timestamp.", fileName,
+  time = ""
+  mktime = fn(x, time = x)
+  Shell out(printer: mktime, "stat", "-c", "%y", fileName)
+  time replace(#/([0-9]{4}-[0-9][0-9]-[0-9][0-9]) (.*)\..*([-+Z].*)/, "$1T$2$3") replace(#/([0-9]{2})([0-9]{2})$/, "$1:$2")
+)
 atom_data = {
   entries: [
    {title: "A", url: "A", updated: "just now", id: "A", content: "The flergy blergy wergied the clergy."},
@@ -12,12 +18,12 @@ atom_data = {
 }
 about_data = {
   title: "Describe :flaviusb",
-  modified: "",
+  modified: fileModified("about.md"),
   content: GenX fromMD("about.md")
 }
 other_data = {
   title: "Other works",
-  modified: "",
+  modified: fileModified("other.md"),
   content: GenX fromMD("other.md")
 }
 index_in  = FileSystem readFully("index.in.html")
@@ -29,7 +35,7 @@ strings each(rep, index_in = index_in replace(rep, #[&quot;<a href="http://twitt
 index_data = {
   title:    "inspect(:flaviusb)",
   content:  index_in,
-  modified: ""
+  modified: fileModified("index.in.html")
 }
 nomod = {
   modified: ""
@@ -98,5 +104,8 @@ posts each(post,
   content = GenX fromMDText(precontent)
   "Generated Markdown content" println
   lude[:content] = content
+  lude[:modified] = fileModified(post)
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
+
+GenX sitemap(base: base)
