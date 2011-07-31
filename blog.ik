@@ -8,7 +8,7 @@ taglist = dsyntax("Add in a taglist",
   basecase = nil
   tags each(tag, 
     if(basecase == nil,
-      basecase = ''((a(href: "http://flaviusb.net/tags/#{`tag}) `tag) " &nbsp; "),
+      basecase = ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &nbsp; "),
       basecase last -> ''((a(href: "http://flaviusb.net/tags/#{`tag}) `tag) " &nbsp; ")))
   if(basecase != nil, 
     ''(''(`basecase))
