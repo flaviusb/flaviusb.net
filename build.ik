@@ -1,10 +1,10 @@
 base = "/var/www/flaviusb.net/htdocs/"
 ;base = "./"
 GenX baseURI = "http://flaviusb.net/"
-fileModified = method("Shell out to get file modification timestamp.", fileName,
+fileModified = method("Shell out to get file modification timestamp in NZST.", fileName,
   time = ""
   mktime = fn(x, time = x)
-  Shell out(printer: mktime, "stat", "-c", "%y", fileName)
+  Shell out(printer: mktime, "stat", "-c", "%y", fileName, env: {"TZ" => "Pacific/Auckland"})
   time replace(#/([0-9]{4}-[0-9][0-9]-[0-9][0-9]) (.*)\..*([-+Z].*)/, "$1T$2$3") replace(#/([0-9]{2})([0-9]{2})$/, "$1:$2")
 )
 atom_data = {
@@ -53,7 +53,6 @@ GenX deployRaw(base: base,
 ; Generate blog posts
 
 blog_data = {
-  title:    "inspect(:flaviusb)"
 }
 simple_ini_parser = method(ini,
   ret = {}
