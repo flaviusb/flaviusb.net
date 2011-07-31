@@ -79,11 +79,11 @@ simple_ini_parser = method(ini,
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
   "Generating blog post: #{post}" println
-  preslug = #/$_posts\/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md^/ match(post) captures
+  preslug = #/^_posts\/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md$/ match(post) captures
   slug = (preslug[0...-1] join("/")) + "/#{preslug[-1]}.html"
   "Slug is: #{slug}" println
   full = FileSystem readFully(post)
-  (prelude, precontent) = (#/\A---$(.*?)^---$(.*)\z/m =~ full) captures
+  (prelude, precontent) = (#/\A---$^(.*?)$^---$^(.*)\z/m =~ full) captures
   "Prelude is:" println
   prelude println
   content = GenX fromMDText(precontent)
