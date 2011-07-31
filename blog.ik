@@ -18,7 +18,7 @@ entry = dsyntax("Add a blog index entry",
   [>date, >url, >title, >tags]
   ''(''(li
           (span "#{`date}")
-          " &raquo; "
+          " » "
           (a(href: `url) "#{`title}")
           " &nbsp; &nbsp; "
           span `taglist(tags)))
