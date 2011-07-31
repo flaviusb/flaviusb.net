@@ -110,6 +110,6 @@ posts each(post,
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
 
-Genx build(base: base, (blog_data => "blog.html") => "blog.ik")
+GenX build(base: base, (blog_data => "blog.html") => "blog.ik")
 
 GenX sitemap(base: base)
