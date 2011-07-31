@@ -52,8 +52,6 @@ GenX deployRaw(base: base,
 
 ; Generate blog posts
 
-blog_data = {
-}
 simple_ini_parser = method(ini,
   ret = {}
   lines = ini split("\n")
@@ -88,6 +86,9 @@ simple_ini_parser = method(ini,
     ret[:(currkey)] = acc)
   return ret
 )
+blog_data = {
+  entries: []
+}
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
   "Generating blog post: #{post}" println
@@ -104,7 +105,11 @@ posts each(post,
   "Generated Markdown content" println
   lude[:content] = content
   lude[:modified] = fileModified(post)
+  "Adding entry to blog index" println
+  blog_data[:entries] push!({date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]})
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
+
+Genx build(base: base, (blog_data => "blog.html") => "blog.ik")
 
 GenX sitemap(base: base)
