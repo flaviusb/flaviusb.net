@@ -87,6 +87,7 @@ simple_ini_parser = method(ini,
   return ret
 )
 blog_data = {
+  modified: fileModified("blog.ik"),
   entries: []
 }
 posts = FileSystem [ "_posts/*.md" ]

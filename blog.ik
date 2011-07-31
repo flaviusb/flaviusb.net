@@ -4,18 +4,18 @@ style = dsyntax("Add style sheet link in place.",
   ''(''link(rel: "stylesheet", type: "text/css", href: `location))
 )
 taglist = dsyntax("Add in a taglist",
-  [tags]
+  [>tags]
   basecase = nil
   tags each(tag, 
     if(basecase == nil,
       basecase = ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &nbsp; "),
       basecase last -> ''((a(href: "http://flaviusb.net/tags/#{`tag}") "#{`tag}") " &nbsp; ")))
   if(basecase != nil, 
-    ''(''(`basecase))
+    ''(''(`basecase)),
     nil)
 )
 entry = dsyntax("Add a blog index entry",
-  [date, url, title, tags]
+  [>date, >url, >title, >tags]
   ''(''(li
           (span "#{`date}")
           " &raquo; "
@@ -49,7 +49,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   (body
     h2 "Entries."
     (ul(class: "posts")
-      `entries(`data[:entries]))
+      `entries(data[:entries]))
     (p
       a(href: "http://flaviusb.net") "Home"
       "   |   "
