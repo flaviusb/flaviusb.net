@@ -21,7 +21,7 @@ entry = dsyntax("Add a blog index entry",
           " &raquo; "
           (a(href: `url) "#{`title}")
           " &nbsp; &nbsp; "
-          span `taglist(tags)))
+          span `taglist(`tags)))
 )
 entries = dsyntax("Map entries data to entries",
   [>theentries]
