@@ -99,4 +99,4 @@ posts each(post,
   "Generated Markdown content" println
   lude[:content] = content
   "Building blog post: #{post}" println
-  GenX build(base: base + "blog/", (lude => slug) => "post.ik"))
+  GenX build(base: base, (lude => slug) => "post.ik"))
