@@ -15,11 +15,11 @@ taglist = dsyntax("Add in a taglist",
     nil)
 )
 entry = dsyntax("Add a blog index entry",
-  [>date, url, >title, >tags]
+  [>date, >url, >title, >tags]
   ''(''(li
           (span "#{`date}")
           " » "
-          (a(href: `url) "#{`title}")
+          (a(href: "#{`url}") "#{`title}")
           " &#160; &#160; "
           span `taglist(tags)))
 )
