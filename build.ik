@@ -92,7 +92,8 @@ blog_data = {
   subtitle: "Entries.",
   entries:  []
 }
-Tag = Struct(:tag, title: "", subtitle: "",  posts: [])
+; For the moment, do not generate modified data
+Tag = Struct(:tag, title: "", subtitle: "",  posts: [], modified: "")
 Tag_Post = Struct(:title, :url, :modified)
 tags = {}
 posts = FileSystem [ "_posts/*.md" ]
