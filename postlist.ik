@@ -38,7 +38,7 @@ entries = dsyntax("Map entries data to entries",
 `doctype("xml")
 `doctype("xhtml")
 html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
-  title "cell(\":flaviusb\") blog entryNames"
+  (title "#{`data[:title]}")
   meta(charset: "utf-8")
   `style("#{`base}reset.css")
   `style("#{`base}style.css")
@@ -48,7 +48,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
   link(rel: "shortcut icon", href: "#{`base}favicon.png", type: "image/png"))
   (body
-    h2 "Entries."
+    (h2 "#{`data[:subtitle]}")
     (ul(class: "posts")
       `entries(data[:entries]))
     (p

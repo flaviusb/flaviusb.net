@@ -87,8 +87,10 @@ simple_ini_parser = method(ini,
   return ret
 )
 blog_data = {
-  modified: fileModified("blog.ik"),
-  entries: []
+  modified: fileModified("postlist.ik"),
+  title:    #[cell(":flaviusb") blog entryNames],
+  subtitle: "Entries.",
+  entries:  []
 }
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
@@ -111,6 +113,6 @@ posts each(post,
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
 
-GenX build(base: base, (blog_data => "blog.html") => "blog.ik")
+GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
 
 GenX sitemap(base: base)
