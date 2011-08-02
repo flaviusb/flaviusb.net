@@ -135,7 +135,7 @@ taglist_data = {
   entries:  []
 }
 tags each(tag,
-  taglist_data entries << {date: "", url: "http://flaviusb.net/tags/#{tag tag}", title: tag tag, number: tag entries length})
+  taglist_data[:entries] << {date: "", url: "http://flaviusb.net/tags/#{tag tag}", title: tag tag, number: tag entries length})
 
 GenX build(base: base, (taglist_data => "tags.html") => "taglist.ik")
 
