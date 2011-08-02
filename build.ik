@@ -88,10 +88,13 @@ simple_ini_parser = method(ini,
 )
 blog_data = {
   modified: fileModified("postlist.ik"),
-  title:    #[cell(":flaviusb") blog entryNames],
+  title:    #[cell(":flaviusb") blog entries],
   subtitle: "Entries.",
   entries:  []
 }
+Tag = Struct(:tag, title: "", subtitle: "",  posts: [])
+Tag_Post = Struct(:title, :url, :modified)
+tags = {}
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
   "Generating blog post: #{post}" println
@@ -110,9 +113,17 @@ posts each(post,
   lude[:modified] = fileModified(post)
   "Adding entry to blog index" println
   blog_data[:entries] push!({date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]})
+  "Adding post to tags indices" println
+  lude[:tags] each(tag,
+    if(tags[tag] == nil,
+      tags[tag] = Tag(tag, title: #[cell(":flaviusb") blog entries filter(post, post tags include?("#{tag}"))], subtitle: #[Entries for tag "#{tag}"]))
+    tags[tag] post push!(Tag_Post(lude[:title], "http://flaviusb.net/#{slug}", lude[:modified]))
+  )
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
 
 GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
+tags each(tag,
+  GenX build(base: base, ((tag value) => "tags/#{tag value tag}.html") => "postlist.ik"))
 
 GenX sitemap(base: base)
