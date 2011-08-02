@@ -117,7 +117,7 @@ posts each(post,
   lude[:tags] each(tag,
     if(tags[tag] == nil,
       tags[tag] = Tag(tag, title: #[cell(":flaviusb") blog entries filter(post, post tags include?("#{tag}"))], subtitle: #[Entries for tag "#{tag}"]))
-    tags[tag] post push!(Tag_Post(lude[:title], "http://flaviusb.net/#{slug}", lude[:modified]))
+    tags[tag] posts push!(Tag_Post(lude[:title], "http://flaviusb.net/#{slug}", lude[:modified]))
   )
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
