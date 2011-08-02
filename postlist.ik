@@ -33,6 +33,12 @@ entries = dsyntax("Map entries data to entries",
       basecase last -> entry(anentry[:date], anentry[:url], anentry[:title], anentry[:tags])))
   ''(''(`basecase))
 )
+guard = dsyntax("guard(a, b) = nothing if a is nil, otherwise b.",
+  [>a, b]
+  if(a != nil,
+    ''(''(`b)),
+   nil)
+)
 
 ''(
 `doctype("xml")
@@ -54,4 +60,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
     (p
       a(href: "http://flaviusb.net") "Home"
       "   |   "
+      `guard(data[:tag],
+        a(rel: "index", href: "http://flaviusb.net/blog") "Blog"
+        "   |   ")
       a(href: "http://github.com/flaviusb") "Code")))
