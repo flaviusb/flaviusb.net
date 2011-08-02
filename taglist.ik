@@ -16,8 +16,8 @@ entries = dsyntax("Map entries data to entries",
   theentries each(anentry, 
     anentry println
     if(basecase == nil,
-      basecase = entry(anentry[:date], anentry[:url], anentry[:title], anentry[:number]),
-      basecase last -> entry(anentry[:date], anentry[:url], anentry[:title], anentry[:number])))
+      basecase = tag(anentry[:date], anentry[:url], anentry[:title], anentry[:number]),
+      basecase last -> tag(anentry[:date], anentry[:url], anentry[:title], anentry[:number])))
   ''(''(`basecase))
 )
 
