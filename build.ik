@@ -128,5 +128,15 @@ posts each(post,
 GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
 tags each(tag,
   GenX build(base: base, ((tag value) => "tags/#{tag value tag}.html") => "postlist.ik"))
+taglist_data = {
+  modified: "",
+  title:    #[cell(":flaviusb") blog entries flatMap(entry, entry tags) unique],
+  subtitle: "List of tags.",
+  entries:  []
+}
+tags each(tag,
+  taglist_data entries << {date: "", url: "http://flaviusb.net/tags/#{tag tag}", title: tag tag, number: tag entries length})
+
+GenX build(base: base, (taglist_data => "tags.html") => "taglist.ik")
 
 GenX sitemap(base: base)

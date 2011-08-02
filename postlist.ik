@@ -62,5 +62,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
       "   |   "
       `guard(data[:tag],
         a(rel: "index", href: "http://flaviusb.net/blog") "Blog"
+        "   |   "
+        a(rel: "index", href: "http://flaviusb.net/tags") "Tags"
         "   |   ")
       a(href: "http://github.com/flaviusb") "Code")))
