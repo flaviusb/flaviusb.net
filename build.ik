@@ -93,7 +93,7 @@ blog_data = {
   entries:  []
 }
 ; For the moment, do not generate modified data
-Tag = Struct(:tag, title: "", subtitle: "",  entries: [], modified: "")
+Tag = Struct(:tag, title: "", subtitle: "",  :entries, modified: "")
 tags = {}
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
@@ -118,7 +118,7 @@ posts each(post,
   lude[:tags] each(tag,
     "Adding post: #{lude[:title]} to tag: #{tag}" println
     if(tags[tag] == nil,
-      tags[tag] = Tag(tag, title: #[cell(":flaviusb") blog entries filter(post, post tags include?("#{tag}"))], subtitle: #[Entries for tag "#{tag}"]))
+      tags[tag] = Tag(tag, [], title: #[cell(":flaviusb") blog entries filter(post, post tags include?("#{tag}"))], subtitle: #[Entries for tag "#{tag}"]))
     tags[tag] entries push!(entry_data)
     tags[tag] println
   )
