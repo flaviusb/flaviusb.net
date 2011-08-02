@@ -37,7 +37,7 @@ guard = dsyntax("guard(a, b) = nothing if a is nil, otherwise b.",
   [>a, b]
   if(a != nil,
     ''(''(`b)),
-   nil)
+   ''(""))
 )
 
 ''(
