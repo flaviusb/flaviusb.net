@@ -93,8 +93,7 @@ blog_data = {
   entries:  []
 }
 ; For the moment, do not generate modified data
-Tag = Struct(:tag, title: "", subtitle: "",  posts: [], modified: "")
-Tag_Post = Struct(:title, :url, :modified)
+Tag = Struct(:tag, title: "", subtitle: "",  entries: [], modified: "")
 tags = {}
 posts = FileSystem [ "_posts/*.md" ]
 posts each(post,
@@ -112,13 +111,14 @@ posts each(post,
   "Generated Markdown content" println
   lude[:content] = content
   lude[:modified] = fileModified(post)
+  entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]}
   "Adding entry to blog index" println
-  blog_data[:entries] push!({date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]})
+  blog_data[:entries] push!(entry_data)
   "Adding post to tags indices" println
   lude[:tags] each(tag,
     if(tags[tag] == nil,
       tags[tag] = Tag(tag, title: #[cell(":flaviusb") blog entries filter(post, post tags include?("#{tag}"))], subtitle: #[Entries for tag "#{tag}"]))
-    tags[tag] posts push!(Tag_Post(lude[:title], "http://flaviusb.net/#{slug}", lude[:modified]))
+    tags[tag] entries push!(entry_data)
   )
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
