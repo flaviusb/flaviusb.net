@@ -12,6 +12,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("#{`base}reset.css")
   `style("#{`base}style.css")
   `style("#{`base}syntax.css")
+  `style("#{`base}style.css")
   `style("#{`base}container.css")
   `style("#{`base}mono.css")
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
