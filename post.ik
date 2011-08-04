@@ -17,7 +17,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("#{`base}mono.css")
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
   link(rel: "shortcut icon", href: "#{`base}favicon.png", type: "image/png"))
-  (body
+  (body(class: "highlight")
     (h1 "#{`data[:title]}")
     (div "#{`data[:content]}")
     (p
