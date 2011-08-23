@@ -12,8 +12,8 @@ Half a year later I took a short holiday, and as often happens decided that a sp
 
 Anyhow, here is the code I came up with:
 
-<div><pre><code>
-<span class="nc">DefaultBehavior</span> <span class="nb">FlowControl</span> <span class="nv">letrec</span> <span class="o">=</span> <span class="nf">macro</span><span class="p">(</span>
+<code><div>
+<pre><span class="nc">DefaultBehavior</span> <span class="nb">FlowControl</span> <span class="nv">letrec</span> <span class="o">=</span> <span class="nf">macro</span><span class="p">(</span>
   <span class="ni">newObject</span> <span class="o">=</span> <span class="p">@</span><span class="k">mimic</span> 
   <span class="n">call</span> <span class="n">arguments</span> <span class="n">each</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> 
     <span class="kr">if</span><span class="p">(</span><span class="n">arg</span> <span class="n">keyword?</span><span class="p">,</span>
@@ -23,7 +23,7 @@ Anyhow, here is the code I came up with:
           <span class="nb">Reflector</span> <span class="n">other:cell</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;</span><span class="p">#{`(</span><span class="n">arg</span> <span class="n">name</span> <span class="k">asText</span> <span class="p">[</span><span class="mf">0.</span><span class="p">.</span><span class="mf">-2</span><span class="p">])}</span><span class="s">&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="p">&#39;&#39;(`(</span><span class="n">arg</span> <span class="n">next</span><span class="p">))</span> <span class="n">evaluateOn</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
           <span class="nb">Reflector</span> <span class="n">other:send</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="s">&quot;</span><span class="p">#{`(</span><span class="n">arg</span> <span class="n">name</span> <span class="k">asText</span> <span class="p">[</span><span class="mf">0.</span><span class="p">.</span><span class="mf">-2</span><span class="p">])}</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="o">*</span> <span class="n">b</span><span class="p">)))</span> <span class="n">evaluateOn</span><span class="p">(</span><span class="n">self</span><span class="p">)),</span> 
         <span class="nb">Reflector</span> <span class="n">other:send</span><span class="p">(</span><span class="n">newObject</span><span class="p">,</span> <span class="n">arg</span><span class="p">)))</span>
-  <span class="n">newObject</span><span class="p">)</span>
-</code></pre></div>
+  <span class="n">newObject</span><span class="p">)</span></pre>
+</div></code>
 
 [^1]: Yes, the literature is substantial. Yes, I probably missed something. No, this is different from the various nil-placeholder-quote-replace implementations out there.
