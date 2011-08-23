@@ -52,6 +52,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("#{`base}container.css")
   `style("#{`base}mono.css")
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
+  link(href: "#{`base}atom.xml", type: "application/atom+xml", rel: "alternate", title: "Blog Atom Feed") 
   link(rel: "shortcut icon", href: "#{`base}favicon.png", type: "image/png"))
   (body
     (h2 "#{`data[:subtitle]}")

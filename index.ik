@@ -14,6 +14,6 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("#{`base}syntax.css")
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
   link(rel: "shortcut icon", href: "#{`base}favicon.png", type: "image/png")
-  `rem(''link(href: "#{`base}atom.xml", type: "application/atom+xml", rel: "alternate", title: "Blog Atom Feed")))
+  link(href: "#{`base}atom.xml", type: "application/atom+xml", rel: "alternate", title: "Blog Atom Feed"))
   (body(class: "highlight")
     (div "#{`data[:content]}")))
