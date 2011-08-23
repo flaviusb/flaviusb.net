@@ -112,7 +112,6 @@ posts each(post,
   lude[:modified] = fileModified(post)
   entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]}
   atom_data[:entries] push!({title: lude[:title], updated: lude[:modified], url: slug, id: slug, content: lude[:content]})
-  if(atom_data[:updated])
   "Adding entry to blog index" println
   blog_data[:entries] push!(entry_data)
   "Adding post to tags indices" println
