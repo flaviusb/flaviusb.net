@@ -58,3 +58,15 @@ code {
   font-size: 80%;
   font-family: 'Inconsolata';
 }
+
+div pre code {
+  border: 0px;
+  padding: 0px;
+  font-size: 100%;
+}
+
+div.code {
+  background: #f8f8ff;
+  border: 1px solid #dedede;
+  padding: 0 0.2em;
+}
