@@ -9,8 +9,8 @@ fileModified = method("Shell out to get file modification timestamp in NZST.", f
 )
 atom_data = {
   entries: [
-   {title: "A", url: "A", updated: "just now", id: "A", content: "The flergy blergy wergied the clergy."},
-   {title: "B", url: "B", updated: "just now", id: "B", content: "Nothing to see here citizen. Move along."}
+   ;{title: "A", url: "A", updated: "just now", id: "A", content: "The flergy blergy wergied the clergy."},
+   ;{title: "B", url: "B", updated: "just now", id: "B", content: "Nothing to see here citizen. Move along."}
   ],
   title: "Main feed",
   updated: "just now",
@@ -41,7 +41,6 @@ nomod = {
   modified: ""
 }
 GenX build(base: base,
-  (atom_data  => "atom.xml")    => "atom.ik",
   (index_data => "index.html")  => "index.ik",
   (about_data => "about.html")  => "container.ik",
   (other_data => "other.html")  => "container.ik")
@@ -112,6 +111,8 @@ posts each(post,
   lude[:content] = content
   lude[:modified] = fileModified(post)
   entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]}
+  atom_data[:entries] push!({title: lude[:title], updated: lude[:modified], url: slug, id: slug, content: lude[:content]})
+  if(atom_data[:updated])
   "Adding entry to blog index" println
   blog_data[:entries] push!(entry_data)
   "Adding post to tags indices" println
@@ -137,6 +138,8 @@ taglist_data = {
 tags each(tag,
   taglist_data[:entries] << {date: "", url: "http://flaviusb.net/tags/#{tag value tag}", title: tag value tag, number: tag value entries length})
 
-GenX build(base: base, (taglist_data => "tags.html") => "taglist.ik")
+GenX build(base: base,
+  (taglist_data => "tags.html") => "taglist.ik",
+  (atom_data  => "atom.xml")    => "atom.ik")
 
 GenX sitemap(base: base)
