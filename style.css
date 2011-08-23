@@ -71,14 +71,17 @@ code {
   background: #f8f8ff;
   border: 1px solid #dedede;
   padding: 0 0.2em;
-  font-size: 80%;
-  font-family: 'Inconsolata';
+  font-size: 0.8em;
+  font-family: "Inconsolata","Menlo", "Monaco", "Andale Mono", "Consolas", "Bitstream Vera Sans Mono", "Liberation Mono", monospace;
 }
-
+pre {
+  font-size: 0.8em;
+  font-family: "Inconsolata","Menlo", "Monaco", "Andale Mono", "Consolas", "Bitstream Vera Sans Mono", "Liberation Mono", monospace;
+}
 div pre code {
   border: 0px;
   padding: 0px;
-  font-size: 100%;
+  font-size: 1em%;
 }
 
 div.code {
