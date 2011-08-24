@@ -13,7 +13,7 @@ sup {
 }
 
 p, div, code, pre, body {
-  line-height: 1.2em;
+  line-height: 1.1em;
 }
 
 .pipevar { color: #6a5acd }
@@ -98,5 +98,5 @@ div.code {
 }
 
 h1, h2, p {
-  padding 0.4em 0;
+  margin-height: 0.2em;
 }
