@@ -96,3 +96,7 @@ div.code {
   border: 1px solid #dedede;
   padding: 0 0.2em;
 }
+
+h1, h2, p {
+  margin 0.2em 0;
+}
