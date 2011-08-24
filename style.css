@@ -12,7 +12,7 @@ sup {
   font-size: 50%
 }
 
-p, div, code, pre, body {
+p, div, code, pre, body, h1, h2 {
   line-height: 1.1em;
 }
 
@@ -98,5 +98,6 @@ div.code {
 }
 
 h1, h2, p {
-  margin-height: 0.2em;
+  margin: 0.2em 0;
+  padding: 0.2em 0;
 }
