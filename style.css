@@ -3,10 +3,17 @@ header, footer, aside, nav, article {
 }
 
 h1 {
-  font-size: 260%;
+  font-size: 240%;
 }
 h2 {
   font-size: 180%;
+}
+sup {
+  font-size: 50%
+}
+
+p, div, code, pre, body {
+  line-height: 1.2em;
 }
 
 .pipevar { color: #6a5acd }
@@ -71,17 +78,17 @@ code {
   background: #f8f8ff;
   border: 1px solid #dedede;
   padding: 0 0.2em;
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: "Inconsolata","Menlo", "Monaco", "Andale Mono", "Consolas", "Bitstream Vera Sans Mono", "Liberation Mono", monospace;
 }
 pre {
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: "Inconsolata","Menlo", "Monaco", "Andale Mono", "Consolas", "Bitstream Vera Sans Mono", "Liberation Mono", monospace;
 }
 div pre code {
   border: 0px;
   padding: 0px;
-  font-size: 1em%;
+  font-size: 1em;
 }
 
 div.code {
