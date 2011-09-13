@@ -146,7 +146,7 @@ posts each(post,
 
 "Sorting blog entries" println
 
-blog_data[:entries] = (blog_data[:entries] sortBy(dateobj))
+blog_data[:entries] = (blog_data[:entries] sortBy([:dateobj]))
 
 GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
 tags each(tag,
