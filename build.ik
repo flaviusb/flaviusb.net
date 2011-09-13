@@ -91,6 +91,24 @@ blog_data = {
   subtitle: "Entries.",
   entries:  []
 }
+
+; Hacky way of comparing dates
+Date = Origin mimic do(
+  ; 'Sorting' is backwards, so that I get most recent first
+  <=> = method(otherDate, cond(
+    (@year < otherDate year) || ((@year == otherDate year) && ((@month < otherDate month) || ((@month == otherDate month) && (@day < otherDate day)))),   1,
+    (@year == otherDate year) && (@month == otherDate month) && (@day == otherDate day),                                                                  0,
+                                                                                                                                                         -1))
+  <   = method(otherDate, (@ <=> otherDate) == -1)
+  >   = method(otherDate, (@ <=> otherDate) == 1)
+)
+
+Dateize = Struct(:year, :month, :day)
+MkDate = method(year, month, day,
+  tmp = Dateize(year, month, day)
+  tmp mimic!(Date))
+  
+
 ; For the moment, do not generate modified data
 Tag = Struct(:tag, title: "", subtitle: "",  :entries, modified: "")
 tags = {}
@@ -100,6 +118,7 @@ posts each(post,
   preslug = #/^_posts\/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md$/ match(post) captures
   slug = (preslug[0...-1] join("/")) + "/#{preslug[-1]}.html"
   "Slug is: #{slug}" println
+  dateobj = MkDate(*preslug[0...-1])
   full = FileSystem readFully(post)
   (prelude, precontent) = (#/\A---\n(.*?)\n---\n(.*)\z/m =~ full) captures
   "Prelude is:" println
@@ -110,7 +129,7 @@ posts each(post,
   "Generated Markdown content" println
   lude[:content] = content
   lude[:modified] = fileModified(post)
-  entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags]}
+  entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags], dateobj: dateobj}
   atom_data[:entries] push!({title: lude[:title], updated: lude[:modified], url: slug, id: slug, content: lude[:content]})
   "Adding entry to blog index" println
   blog_data[:entries] push!(entry_data)
@@ -124,6 +143,10 @@ posts each(post,
   )
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
+
+"Sorting blog entries" println
+
+blog_data[:entries] = (blog_data[:entries] sortBy(dateobj))
 
 GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
 tags each(tag,
