@@ -27,14 +27,14 @@ firstpart = method("Take the content of a post, and return the first p tag.", te
 )
 entry = method("Add a blog index entry",
   date, url, title, tags, dateobj, content,
-  ''(section
+  ''((section
           (h2
             (a(href: "#{`url}")
             (span(class: "date") "#{`dateobj toStr}")
             (" &#160; #{`title}"))
           " &#160; &#160; ")
           span(class: "fr") `taglist(tags)
-          div `firstpart(content))
+          div `firstpart(content)).)
 )
 entries = dsyntax("Map entries data to entries",
   [>theentries]
