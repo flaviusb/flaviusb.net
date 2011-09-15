@@ -95,12 +95,13 @@ blog_data = {
 ; Hacky way of comparing dates
 Date = Origin mimic do(
   ; 'Sorting' is backwards, so that I get most recent first
-  <=> = method(otherDate, cond(
+  <=>   = method(otherDate, cond(
     (@year < otherDate year) || ((@year == otherDate year) && ((@month < otherDate month) || ((@month == otherDate month) && (@day < otherDate day)))),   1,
     (@year == otherDate year) && (@month == otherDate month) && (@day == otherDate day),                                                                  0,
                                                                                                                                                          -1))
-  <   = method(otherDate, (@ <=> otherDate) == -1)
-  >   = method(otherDate, (@ <=> otherDate) == 1)
+  <     = method(otherDate, (@ <=> otherDate) == -1)
+  >     = method(otherDate, (@ <=> otherDate) == 1)
+  toStr = method("#{@year}-#{@month}-#{@day}")
 )
 
 Dateize = Struct(:year, :month, :day)
@@ -129,7 +130,7 @@ posts each(post,
   "Generated Markdown content" println
   lude[:content] = content
   lude[:modified] = fileModified(post)
-  entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags], dateobj: dateobj}
+  entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags], dateobj: dateobj, content: lude[:content]}
   atom_data[:entries] push!({title: lude[:title], updated: lude[:modified], url: slug, id: slug, content: lude[:content]})
   "Adding entry to blog index" println
   blog_data[:entries] push!(entry_data)
@@ -149,6 +150,7 @@ posts each(post,
 blog_data[:entries] = (blog_data[:entries] sortBy([:dateobj]))
 
 GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
+
 tags each(tag,
   GenX build(base: base, ((tag value) => "tags/#{tag value tag}.html") => "postlist.ik"))
 taglist_data = {
@@ -165,3 +167,6 @@ GenX build(base: base,
   (atom_data  => "atom.xml")    => "atom.ik")
 
 GenX sitemap(base: base)
+
+; We do not want this added to the sitemap.
+GenX build(base: base, (blog_data => "blog/whyso.html") => "postfromcubefarm.ik")
