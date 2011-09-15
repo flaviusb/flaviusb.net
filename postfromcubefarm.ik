@@ -23,7 +23,7 @@ firstpart = method("Take the content of a post, and return the first p tag.", te
   out = javax:xml:transform:stream:StreamResult new(bufferhandle)
   src = javax:xml:transform:dom:DOMSource new(document getElementsByTagName("p") item(0))
   noptransform transform(src, out)
-  ''("#{`(bufferhandle toString)}")
+  ''("#{`bufferhandle toString}")
 )
 entry = method("Add a blog index entry",
   date, url, title, tags, dateobj, content,
@@ -31,7 +31,7 @@ entry = method("Add a blog index entry",
           (h2
             (a(href: "#{`url}")
             (span(class: "date") "#{`dateobj toStr}")
-            " &#160; #{`title}")
+            (" &#160; #{`title}"))
           " &#160; &#160; ")
           span(class: "fr") `taglist(tags)
           div `firstpart(content))
