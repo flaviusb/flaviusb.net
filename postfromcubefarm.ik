@@ -34,7 +34,8 @@ entry = method("Add a blog index entry",
             (" &#160; #{`title}"))
           " &#160; &#160; ")
           span(class: "fr") `taglist(tags)
-          div `firstpart(content)).)
+          div `firstpart(content)
+          (a(class: "fr", href: "#{`url}") "Read more...").))
 )
 entries = dsyntax("Map entries data to entries",
   [>theentries]
