@@ -142,8 +142,8 @@ posts each(post,
     "Adding post: #{lude[:title]} to tag: #{tag}" println
     if(tags[tag] == nil,
       tags[tag] = Tag(tag, [], title: #[cell(":flaviusb") blog entries filter(post, post tags include?("#{tag}"))], subtitle: #[Entries for tag "#{tag}"]))
-    tags[tag] entries push!(entry_data)
-    tags[tag] println
+    tags[tag] entries push!(lude)
+    ;tags[tag] println
   )
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
