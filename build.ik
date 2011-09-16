@@ -114,6 +114,7 @@ MkDate = method(year, month, day,
 Tag = Struct(:tag, title: "", subtitle: "",  :entries, modified: "")
 tags = {}
 posts = FileSystem [ "_posts/*.md" ]
+all_entries = []
 posts each(post,
   "Generating blog post: #{post}" println
   preslug = #/^_posts\/([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md$/ match(post) captures
@@ -122,18 +123,20 @@ posts each(post,
   dateobj = MkDate(*preslug[0...-1])
   full = FileSystem readFully(post)
   (prelude, precontent) = (#/\A---\n(.*?)\n---\n(.*)\z/m =~ full) captures
-  "Prelude is:" println
-  prelude println
+  ;"Prelude is:" println
+  ;prelude println
   lude = simple_ini_parser(prelude)
-  "Parsed prelude as #{lude}" println
+  ;"Parsed prelude as #{lude}" println
   content = GenX fromMDText(precontent)
   "Generated Markdown content" println
   lude[:content] = content
-  lude[:modified] = fileModified(post)
-  entry_data = {date: lude[:modified], url: "http://flaviusb.net/#{slug}", title: lude[:title], tags: lude[:tags], dateobj: dateobj, content: lude[:content]}
-  atom_data[:entries] push!({title: lude[:title], updated: lude[:modified], url: slug, id: slug, content: lude[:content]})
-  "Adding entry to blog index" println
-  blog_data[:entries] push!(entry_data)
+  lude_date = fileModified(post)
+  lude[:date] = lude_date
+  lude[:updated] = lude_date
+  lude[:url] = "http://flaviusb.net/#{slug}"
+  lude[:id] = slug
+  lude[:dateobj] = dateobj
+  all_entries push!(lude)
   "Adding post to tags indices" println
   lude[:tags] each(tag,
     "Adding post: #{lude[:title]} to tag: #{tag}" println
@@ -145,9 +148,11 @@ posts each(post,
   "Building blog post: #{post}" println
   GenX build(base: base, (lude => slug) => "post.ik"))
 
-"Sorting blog entries" println
+"Sorting blog/atom entries" println
+all_entries = (all_entries sortby([:dateobj]))
 
-blog_data[:entries] = (blog_data[:entries] sortBy([:dateobj]))
+blog_data[:entries] = all_entries
+atom_data[:entries] = all_entries
 
 GenX build(base: base, (blog_data => "blog.html") => "postlist.ik")
 

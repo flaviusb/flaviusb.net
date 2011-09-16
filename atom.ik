@@ -1,7 +1,7 @@
 entry = method("Add entry in place", title, url, updated, id, content,
   ''((entry
           (title "#{`title}")
-          link(href: "http://flaviusb.net/#{`url}")
+          link(href: "#{`url}")
           (updated "#{`updated}")
           (id "http://flaviusb.net/#{`id}")
           (content(type: "html") "#{`content}")).)
