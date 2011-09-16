@@ -4,6 +4,7 @@ tags:
 - rant
 - philosophy
 - politics
+nsfw: true
 ---
 
 What do I mean by extremism? Basically, a nonlinear response to certain kinds of stimuli, with an unusually large amount of headroom for escalation, and no internal censors or stop signs for certain kinds of usually forbidden thoughts or actions.
