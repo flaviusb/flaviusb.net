@@ -149,7 +149,7 @@ posts each(post,
   GenX build(base: base, (lude => slug) => "post.ik"))
 
 "Sorting blog/atom entries" println
-all_entries = (all_entries sortby([:dateobj]))
+all_entries = (all_entries sortBy([:dateobj]))
 
 blog_data[:entries] = all_entries
 atom_data[:entries] = all_entries
