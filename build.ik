@@ -174,7 +174,8 @@ GenX build(base: base,
 GenX sitemap(base: base)
 
 ; We do not want this added to the sitemap.
-sfw_entries = all_entries filter(entry, entry[:nsfw] != "true")
-sfw_data = blog_data
-sfw_data[:entries] = sfw_entries
+sfw_data = blog_data merge(
+  entries:  all_entries filter(entry, entry[:nsfw] != "true"),
+  title:    "The blog of Justin (:flaviusb) Marsh",
+  subtitle: "Blog Entries")
 GenX build(base: base, (sfw_data => "blog/whyso.html") => "postfromcubefarm.ik")
