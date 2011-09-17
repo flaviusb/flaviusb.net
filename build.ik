@@ -43,7 +43,8 @@ nomod = {
 GenX build(base: base,
   (index_data => "index.html")  => "index.ik",
   (about_data => "about.html")  => "container.ik",
-  (other_data => "other.html")  => "container.ik")
+  (other_data => "other.html")  => "container.ik",
+  (nomod      => "cube.css")    => "cubefarm.css.ik")
 
 ; Deploy assets
 GenX deployRaw(base: base,
