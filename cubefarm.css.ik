@@ -32,7 +32,8 @@ h2 a {
 }
 
 $rc {
-  "border-radius" => "10px"
+  "border-radius" => "10px",
+  border: "1px solid #dedede"
 }
 
 html | body {
@@ -57,5 +58,19 @@ $footer {
   "background-color" => "#d5e1e9",
   "border-top" => "#{`footerBorder}px solid #444"
 }
+h1 {
+  "font-size" => "200%"
+}
+h2 {
+  "font-size" => "150%"
+}
 
+;p | div | code | pre | body | h1 | h2 {
+;  "line-height" => "1.1em"
+;}
+
+h1 | h2 | p {
+  margin: "0.2em 0",
+  padding: "0.2em 0"
+}
 )
