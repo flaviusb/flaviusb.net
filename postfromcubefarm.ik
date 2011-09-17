@@ -69,11 +69,12 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   `style("http://fonts.googleapis.com/css?family=Inconsolata")
   link(href: "#{`base}atom.xml", type: "application/atom+xml", rel: "alternate", title: "Blog Atom Feed") 
   link(rel: "shortcut icon", href: "#{`base}favicon.png", type: "image/png"))
-  (body(class: "highlight")
+  (body(class: "highlight") (div(class: "container")
     (h2 "#{`data[:subtitle]}")
     (article
       `entries(data[:entries]))
-    (p
+    div(class: "footergap"))
+    (p(class: "footer")
       a(href: "http://flaviusb.net") "Home"
       "   |   "
       `guard(data[:tag],

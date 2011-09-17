@@ -1,3 +1,5 @@
+footerBorder = 6
+footerHeight = 80
 ''(
 ; First we have code stuff
 code {
@@ -21,4 +23,39 @@ div pre code {
 }
 
 ; Then we have actual layout
+
+a:hover { ^textDecoration :underline, color: :blue }
+
+h2 a {
+  color: "black",
+  ^textDecoration :none
+}
+
+$rc {
+  "border-radius" => "10px"
+}
+
+html | body {
+  height: "100%"
+}
+
+$container {
+  "min-height" => "100%",
+  "margin-bottom" => "-#{`footerHeight + `footerBorder}px",
+  position: "relative"
+}
+
+$footergap {
+  height: "#{`footerHeight + `footerBorder}px",
+  clear: "both"
+}
+
+$footer {
+  height: "#{`footerHeight}px",
+  position: "relative",
+  color: "#444",
+  "background-color" => "#d5e1e9",
+  "border-top" => "#{`footerBorder}px solid #444"
+}
+
 )
