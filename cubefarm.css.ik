@@ -1,5 +1,5 @@
 footerBorder = 6
-footerHeight = 80
+footerHeight = 60
 ''(
 ; First we have code stuff
 code {
