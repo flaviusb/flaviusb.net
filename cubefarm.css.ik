@@ -91,4 +91,7 @@ $clear {
 	width: "0",
 	height: "0",
 } "/* http://sonspring.com/journal/clearing-floats */"
+$gap {
+  margin: "25px"
+}
 )
