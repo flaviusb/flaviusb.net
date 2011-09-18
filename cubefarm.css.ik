@@ -24,7 +24,7 @@ div pre code {
 
 ; Then we have actual layout
 
-a:hover, $tags a:hover { ^textDecoration :underline, color: :blue }
+a:hover | $tags a:hover { ^textDecoration :underline, color: :blue }
 
 h2 a {
   color: "black",
