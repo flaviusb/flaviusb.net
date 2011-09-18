@@ -35,7 +35,8 @@ $rc {
   "border-radius" => "10px",
   border: "1px solid #dedede",
   "min-height" => "75px",
-  width: "100%"  
+  width: "100%",
+  background: "#fff"
 }
 
 html | body {
@@ -76,7 +77,7 @@ h1 | h2 | p {
   padding: "0.2em 0"
 }
 $gap {
-  margin: "25px"
+  padding: "15px"
 }
 section {
   "margin-bottom" => "25px"
