@@ -94,4 +94,7 @@ $clear {
 $gap {
   margin: "25px"
 }
+section {
+  "margin-bottom" => "25px"
+}
 )
