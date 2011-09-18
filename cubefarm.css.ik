@@ -33,7 +33,9 @@ h2 a {
 
 $rc {
   "border-radius" => "10px",
-  border: "1px solid #dedede"
+  border: "1px solid #dedede",
+  "min-height" => "75px",
+  width: "100%"  
 }
 
 html | body {
