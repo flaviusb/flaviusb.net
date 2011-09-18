@@ -92,6 +92,11 @@ $outsideborder {
   background: "#f8f8ff"
 }
 
+$topcolor {
+  background: "ff7f50",
+  "border-bottom" => "#{`footerBorder}px solid #444"
+}
+
 "/* Floating & Alignment */\n"
 $fl{float: :left}
 $fr{float: :right}
