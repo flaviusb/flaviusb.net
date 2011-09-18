@@ -81,7 +81,9 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
       div(class: "footergap"))
     (div(class: "footer")
       (p(class: "ac")
-        a(href: "http://flaviusb.net") "Home"
+        a(href: "http://whyso.co.nz") "Why So Ltd."
+        "   |   "
+        a(href: "http://flaviusb.net") ":flaviusb"
         "   |   "
         `guard(data[:tag],
           a(rel: "index", href: "http://flaviusb.net/blog") "Blog"
