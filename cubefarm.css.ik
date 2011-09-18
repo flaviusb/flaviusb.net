@@ -82,6 +82,11 @@ section {
   "margin-bottom" => "25px"
 }
 
+$tags a {
+  color: "#aaa",
+  "font-size" => "80%"
+}
+
 "/* Floating & Alignment */\n"
 $fl{float: :left}
 $fr{float: :right}
