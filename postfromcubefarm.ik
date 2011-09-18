@@ -77,8 +77,9 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
           (article(class: "prefix_1 grid_10 suffix_1")
             `entries(data[:entries]))
             div(class: "clear")))
+      div
       div(class: "footergap"))
-    (p(class: "footer")
+    (div(class: "footer")
       a(href: "http://flaviusb.net") "Home"
       "   |   "
       `guard(data[:tag],
