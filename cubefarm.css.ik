@@ -93,7 +93,7 @@ $outsideborder {
 }
 
 $topcolor {
-  background: "ff7f50",
+  background: "#ff7f50",
   "border-bottom" => "#{`footerBorder}px solid #444"
 }
 
