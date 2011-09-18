@@ -87,6 +87,10 @@ $tags a {
   "font-size" => "80%"
 }
 
+$outsideborder {
+  background: "#f8f8ff"
+}
+
 "/* Floating & Alignment */\n"
 $fl{float: :left}
 $fr{float: :right}
