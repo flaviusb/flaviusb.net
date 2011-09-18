@@ -80,11 +80,12 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
       div(class: "gap")
       div(class: "footergap"))
     (div(class: "footer")
-      a(href: "http://flaviusb.net") "Home"
-      "   |   "
-      `guard(data[:tag],
-        a(rel: "index", href: "http://flaviusb.net/blog") "Blog"
+      (p(class: "ac")
+        a(href: "http://flaviusb.net") "Home"
         "   |   "
-        a(rel: "index", href: "http://flaviusb.net/tags") "Tags"
-        "   |   ")
-      a(href: "http://github.com/flaviusb") "Code")))
+        `guard(data[:tag],
+          a(rel: "index", href: "http://flaviusb.net/blog") "Blog"
+          "   |   "
+          a(rel: "index", href: "http://flaviusb.net/tags") "Tags"
+          "   |   ")
+        a(href: "http://github.com/flaviusb") "Code"))))

@@ -75,7 +75,20 @@ h1 | h2 | p {
   margin: "0.2em 0",
   padding: "0.2em 0"
 }
+$gap {
+  margin: "25px"
+}
+section {
+  "margin-bottom" => "25px"
+}
 
+"/* Floating & Alignment */\n"
+$fl{float: :left}
+$fr{float: :right}
+$ac{"text-align" => "center"}
+$ar{"text-align" => "right"}
+
+"/* Clear floats */\n"
 $clear {
 	background: :none,
 	border: "0",
@@ -91,10 +104,5 @@ $clear {
 	width: "0",
 	height: "0",
 } "/* http://sonspring.com/journal/clearing-floats */"
-$gap {
-  margin: "25px"
-}
-section {
-  "margin-bottom" => "25px"
-}
+
 )
