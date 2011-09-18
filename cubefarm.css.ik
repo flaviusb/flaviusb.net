@@ -75,4 +75,20 @@ h1 | h2 | p {
   margin: "0.2em 0",
   padding: "0.2em 0"
 }
+
+$clear {
+	background: :none,
+	border: "0",
+	clear: :both,
+	display: :block,
+	float: :none,
+	"font-size" => "0",
+	"list-style" => :none,
+	margin: "0",
+	padding: "0",
+	overflow: :hidden,
+	visibility: :hidden,
+	width: "0",
+	height: "0",
+} "/* http://sonspring.com/journal/clearing-floats */"
 )
