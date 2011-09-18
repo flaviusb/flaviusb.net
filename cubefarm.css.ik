@@ -94,7 +94,8 @@ $outsideborder {
 
 $topcolor {
   background: "#ff7f50",
-  "border-bottom" => "#{`footerBorder}px solid #444"
+  "border-bottom" => "#{`footerBorder}px solid #444",
+  "border-top"    => "0px"
 }
 
 "/* Floating & Alignment */\n"
