@@ -73,7 +73,8 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
     (div(class: "container")
       (h2 "#{`data[:subtitle]}")
       (article(class: "rc container_12")
-        `entries(data[:entries]))
+        (div(class: "prefix_1 grid_10 suffix_1")
+          `entries(data[:entries])))
       div(class: "footergap"))
     (p(class: "footer")
       a(href: "http://flaviusb.net") "Home"
