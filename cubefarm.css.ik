@@ -73,8 +73,7 @@ h2 {
 ;}
 
 h1 | h2 | p {
-  margin: "0.2em 0",
-  padding: "0.2em 0"
+  padding: "0.4em 0"
 }
 $gap {
   padding: "15px"
