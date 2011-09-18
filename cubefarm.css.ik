@@ -26,6 +26,10 @@ div pre code {
 
 a:hover | $tags a:hover { ^textDecoration :underline, color: :blue }
 
+$subtitle {
+  "font-family" => #["Sorts Mill Goudy", serif]
+}
+
 h2 a {
   color: "black",
   ^textDecoration :none
