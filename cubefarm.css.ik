@@ -80,7 +80,7 @@ h1 | h2 | p {
   padding: "0.4em 0"
 }
 $gap {
-  padding: "15px"
+  padding: "15px 0"
 }
 section {
   "margin-bottom" => "25px"
