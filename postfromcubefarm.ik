@@ -73,7 +73,7 @@ html(xmlns: "http://www.w3.org/1999/xhtml", lang: "en") (head
   (body(class: "highlight")
     (div(class: "container")
       (div(class: "topcolor") (div(class: "container_12")
-        (h2(class: "prefix_1 subtitle") "#{`data[:subtitle]}")))
+        (h2(class: "prefix_1 grid_10 suffix_1 subtitle") "#{`data[:subtitle]}")))
       (div(class: "outsideborder gap")
         (div(class: "container_12")
           (div(class: "rc")
