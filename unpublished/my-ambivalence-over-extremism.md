@@ -7,12 +7,14 @@ tags:
 nsfw: true
 ---
 
+This post was prompted by reading Eliezar's 
 What do I mean by extremism? Basically, a nonlinear response to certain kinds of stimuli, with an unusually large amount of headroom for escalation, and no internal censors or stop signs for certain kinds of usually forbidden thoughts or actions.
 
 Pros
 ----
 
 Taking ideas seriously.
+- Some of this assumes that you have no compartmentalisation problems/have a sound, complete and consistent set of beliefs; compartmentalisation a la a paraconsistent epistemology can make sense where one knows that ones beliefs taken together can be problematic, but where one cannot jump to any frame that has a smaller kernel of inconsistency...
 Doves and Hawks, the random reinforcement schedule, the Shock Doctrine; ideas about social engineering which require extremism.
 Getting out of a local maxima requires bridging an energy gap.
 Expending ambient energy in periodic burnoffs - 'occasional terrorism' as cheaper[^1] than rare 'total war'.
