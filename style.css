@@ -9,6 +9,10 @@ h2 {
   font-size: 180%;
 }
 
+.large {
+  font-size: 140%;
+}
+
 p, div, code, pre, body, h1, h2 {
   line-height: 1.1em;
 }
