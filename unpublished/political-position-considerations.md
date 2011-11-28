@@ -51,3 +51,15 @@ Inequality
 - 'Bad' inequality
   - Systemic inequality - a part of the violence in the machine
   - Oligarcy and Kleptocracy
+
+
+The state and agression
+-----------------------
+
+I do not find that the non-aggression principle or non-initiation principle are compelling, in that...
+
+I also think that as soon as you have something that is substantially identical to 'the state', you have the state. So, if there were some kind of state free land area, and I were to set up a limited capital society within it that had geographic bounds, taxation, laws, a military, citizenship... even if it was more horizontal than vertical, and used more direct democracy than representative democracy, it would be a state.
+
+As for the violence of imposition of tax and law, I happen to believe that if tax is progressive rather than regressive, and law is given by a body that has the mandate of the people, then these can be just, and thus can be said (in the absence of actual violence required to impose them) to not be violent.
+
+And basically that **if** you have the consent of the governed, **then** you can govern without (significant) violence; (significant) violence should only become necessary to maintain the function of a state when it does not have the consent of the governed, and thus should be overthrown or in some other way changed anyway.
