@@ -16,12 +16,14 @@ Money as sensor
 - Forces information about true preferences in a way that discussion and voting do not necessarily
 - Stored work
 - Breaking work into bits ie fungibility, liquidity, unit of account, etc
+- Using it this way however means that any significant revenue from bogus sources will make you insane
 
 Money as Macguffin
 ------------------
 
-- I do not want money to be able to do arbitrary things
-  - For example, ... buying success rather than buying training
+- I do not want money to be able to do arbitrary things. Examples:
+  - ... buying success rather than buying training. This applies especially to the problem of children and friends; a rich persons children and friends should have more training, and better stuff, which allows for the potential to be better, and thus pass a filter. It should not, however, allow one to get a better shot through or bypass entirely a filter in a way unconnected to ability.
+  - Bypassing social mores. That is to say, it is fine to have more and better stuff; what is not fine is when you can live in a totally different universe.
 
 Capital
 -------
