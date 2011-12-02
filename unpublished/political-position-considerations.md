@@ -63,9 +63,9 @@ The NAP
 
 I do not find that the non-aggression principle or non-initiation principle make any sense at all; my reasoning is not particularly original, but I should probably set it out as a matter of logical politeness.
 
+
 The state and agression
 -----------------------
-
 
 I also think that as soon as you have something that is substantially identical to 'the state', you have the state. So, if there were some kind of state free land area, and I were to set up a limited capital society within it that had geographic bounds, taxation, laws, a military, citizenship... even if it was more horizontal than vertical, and used more direct democracy than representative democracy, it would be a state.
 
