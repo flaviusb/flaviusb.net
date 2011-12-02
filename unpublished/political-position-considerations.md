@@ -8,11 +8,14 @@ tags:
 
 This post was prompted by trying to untangle my beliefs over property, hierarchy, legitimacy of governance, capital and rent, and function of the state.
 
+
+First, an aside about verbal violence. 'Hierarchy' - lit. 'Sacred Order'. Hmm. To continue with this, consider the use to which the word 'violence' is being put.
+
+
 Money as sensor
 ---------------
 
-- Provides a way for people to non-hierarchically work together
-- Independant agents...
+- Provides a way for people to non-hierarchically work together - that is, the magic happens when we have independant agents 
 - Forces information about true preferences in a way that discussion and voting do not necessarily
 - Stored work
 - Breaking work into bits ie fungibility, liquidity, unit of account, etc
@@ -55,10 +58,14 @@ Inequality
   - Oligarcy and Kleptocracy
 
 
+The NAP
+-------
+
+I do not find that the non-aggression principle or non-initiation principle make any sense at all; my reasoning is not particularly original, but I should probably set it out as a matter of logical politeness.
+
 The state and agression
 -----------------------
 
-I do not find that the non-aggression principle or non-initiation principle are compelling, in that...
 
 I also think that as soon as you have something that is substantially identical to 'the state', you have the state. So, if there were some kind of state free land area, and I were to set up a limited capital society within it that had geographic bounds, taxation, laws, a military, citizenship... even if it was more horizontal than vertical, and used more direct democracy than representative democracy, it would be a state.
 
