@@ -38,7 +38,7 @@ Hierarchy
 ---------
 
 - Dynasties bad
-- Cleric classes can be good - specialisation, specialist knowledge, useful social roles or social contracts (ie doctor, laywer, confessor)
+- Cleric classes can be good - specialisation, specialist knowledge, useful social roles or social contracts (ie doctor, laywer, confessor). False 'moral superiority' or other non-related status claims are bad, however.
 - In some specific situations hierarchy seems to work exceptionally better than other alternatives ie the military
 - The cybernetic problem
   - Problems with getting true information
@@ -48,7 +48,11 @@ Hierarchy
   - The Principal-Agent problem
 - Delayed open vs true open
   - True open is 
-
+- Three waves of business: hobbyist, professional, bureaucrat. As applied to countries:
+    - Hobbyist country: some people with guns, who have cool ideas and ...
+    - Professional countries: The country that does x, for some small set of things in x. Different but related x for exports, culture, etc. Eg for NZ, we have dairy, forestry, and tourism for exports. This works fine until you have grown as much as you can in each thing in x, and need to start having more things in x than you can/getting into other markets/having a more diverse set of cultures.
+    - Bureaucratic countries:
+  - Machines made of meat can be useful, when you want giant silos that produce stuff, and can be moved around as units. But one goal should always be to replace as much of the meat with metal as possible, and another should be to make sure that there is meat-machine only in the places and layers that need it.
 
 Inequality
 ----------
@@ -62,6 +66,14 @@ The NAP
 -------
 
 I do not find that the non-aggression principle or non-initiation principle make any sense at all; my reasoning is not particularly original, but I should probably set it out as a matter of logical politeness.
+
+Two parts to my dislike: the thing itself, and how it is used.
+
+- This seems to be a case of deliberate equivocation, such that one can say 'Taxes count as initiation of agression' but also 'Foreclosure does not count as initiation of agression', and in more Randian circles, 'surprise preemptive fatal sanction does not count as agression'.
+
+Agression, Violence and other words that are equivocated upon
+-------------------------------------------------------------
+
 
 
 The state and agression
