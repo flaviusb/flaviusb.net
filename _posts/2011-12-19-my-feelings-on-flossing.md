@@ -1,14 +1,11 @@
 ---
-title: My feelings on open sourcing/liberating software that I write
+title: My feelings on FLOSSing software that I write
 tags:
 - musing
 - programming
 ---
 
-My feelings on FLOSSing software that I write
----------------------------------------------
-
-To get this bit out of the way, FLOSSing is a virtuous act etc etc. I hope I don't have to argue for that point; this is not about why to contribute to existing efforts or why people might open things up, but rather about why I open up things that I have made myself.
+To get this bit out of the way, FLOSSing[^1] is a virtuous act etc etc. I hope I don't have to argue for that point; this is not about why to contribute to existing efforts or why people might open things up, but rather about why I open up things that I have made myself.
 
 It is really very simple:
 
@@ -26,3 +23,5 @@ It is really very simple:
 
 The first three points mean that I am very inclined to open up libraries, or things that I don't want to work on anymore but have potential to be big. Basically, stuff mainly for programmers, that may incidentally help non-programmers. As patents and tivoization can block point four, I use GPLv3 rather than GPLv2.
 
+
+[^1]: FLOSS = Free, Libre or Open Source, and comprises everything from copyleft to copyfree.
