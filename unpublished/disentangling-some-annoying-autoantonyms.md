@@ -15,7 +15,7 @@ In English, as in many languages, words can have several distinct, even contradi
 
 An easy example here: Anarchy.
 
-First, the strawman meaning: violent lawlessness, with men in black masks smashing, burning and mudering with impunity.
+First, the strawman meaning: violent lawlessness, with men in black masks smashing, burning and murdering with impunity.
 
 Then, the political science meaning, which Anarchists mean when they refer to Anarchism: not needing leaders or coercive social relations; a form of governance comprised of direct action and mutual aid, with the potential addition of direct democracy, personal property (as distinct from private property) and workers collectives amongst other things, and which completely rejects private property, the state, corporations, wage slavery and potentially various other things.
 
@@ -31,3 +31,10 @@ This is complicated further by tribal identification and ingroup-outgroup behavi
 
 So, Anarchism was comparatively easy to talk about because few people have their identity invested in the idea that the strawman version of Anarchism is the true one, but there often is still some difficulty, caused by spillover from people having identity tied up in some other system (such as Capitalism) being The Only Right Answer, and therefore some identity tied up in there not being any reasonable alternatives.
 
+
+Capitalism
+
+vs Mercantilism
+a naive 'Marketism'
+creative destruction
+a way of organising independent 
