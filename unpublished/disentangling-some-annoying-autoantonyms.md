@@ -4,9 +4,10 @@ tags:
 - politics
 - language
 - pedantry
+- rant
 ---
 
-This post was prompted by running into the same word being used in completly contradictory ways that were central to certain political arguments I keep having with people. Now, I do not live in the US, so at least most people here can have 'Communism' and 'Socialism' explained to them and not explode before you have finished the first sentence, but I do still run into some problems with that. Trying to explain what I mean or pin down what other people mean by 'Capitalism' is worse though. So, first an overall explanation, then some specific examples.
+This post was prompted by repeated headdesking caused by running into the same word being used in rather different ways by people in political arguments, and having people respond explosively when I try to pin them down on a meaning or discuss why what I am talking about is different. Now, I do not live in the US, so at least most people here can have 'Communism' and 'Socialism' explained to them and not explode before you have finished the first sentence, but I do still run into some problems with that. Trying to explain what I mean or pin down what other people mean by 'Capitalism' is worse though. So, first an overall explanation, then a simple example, then more of an explanation, then the Big Three.
 
 Why Autoantonyms?
 -----------------
@@ -37,11 +38,9 @@ Boom, equivocation; the use of Anarchism in one part of the argument is differen
 
 Unfortunately, it isn't; hence, this long prelude to the real rant.
 
-###Self-defending beliefs
+###Insanely held beliefs
 
-A self-defending belief is one that
-
-This form of thing is rendered self-defending largely by tribal identification and ingroup-outgroup behaviour; people end up with powerful emotions, and even their identity invested in these definitions. This explains why people react (in the case of mere strong emotions) with seemingly random emotional outbursts, or (in the case of identity) as if it will kill them if they understand or even acknowledge your words, leading to anything from trite thoughtless (and yet final) brushoffs through to paroxysms of rage.
+These beliefs in signs signifying only either strawman arguments or 'the obviously correct thing' do not seem to be merely strongly held; they seem to be held in defiance of all proof, argument or opposition. This seems to me to be largely because of tribal identification, ingroup-outgroup behaviour, and ultimately fear of death; people end up with powerful emotions, and even their identity invested in these definitions. Tribal identification over time turns shibboleths into actual beliefs, and ingroup-outgroup effects lead to investment of identity in dehumanization and demonization of the outgroup, and investment of identity in the rightness of the ingroup. This explains why people react (in the case of mere strong emotions) with seemingly random emotional outbursts, or (in the case of identity) as if it will kill them if they understand or even acknowledge your words, leading to responses ranging from trite thoughtless (and yet final) brushoffs through to paroxysms of rage.
 
 So, Anarchism was comparatively easy to talk about because few people have their identity invested in the idea that the strawman version of Anarchism is the true one, but there often is still some difficulty, caused by spillover from people having identity tied up in some other system (such as Capitalism) being The Only Right Answer, and therefore some identity tied up in there not being any reasonable alternatives.
 
@@ -49,7 +48,7 @@ So, Anarchism was comparatively easy to talk about because few people have their
 
 I present a short, incomplete and contradictory list of the things that people often refer to using the words Capitalism, Communism or Socialism below. My comments occur in brackets. If you ragequit when reading these lists, you are demonstrating the point of the rant.
 
-Capitalism
+####Capitalism
 - as vs Mercantilism (an actual historical perspective about the economic and political system as was relevant in the 18th century in Western Europe; discussions about balance of trade vs comparative advantage etc)
 - as vs Feudalism (a fantasy not grounded in history; Feudalism gave way to eg Mercantilism before the invention of Capitalism, even in hereditary despotic states)
 - a naive 'Market-ism' or 'Trade-ism' (useless for argument, as it is vitiated of all that distinguishes it from eg Mercantilism, many forms of Anarchism and Socialism, traditional Maori lifeways...)
@@ -66,11 +65,11 @@ Capitalism
 - death camps (see Naiomi Klein's fantastic book 'The Shock Doctrine' for a short and sweet intro to modern capitalism and death camps)
 
 
-Communism
+####Communism
 - death camps (see 'Stalinism', the Khmer Rouge or North Korea for an intro to this)
 - 'Socialism'
 - 'Stalinism' (That is, Stalin was a Communist, so all Communists must be advocating Stalinism)
-- 'Liberalism' or 'Leftism' (This seems to be more of a bizzarre form of slur than any actual reasoned belief)
+- 'Liberalism' or 'Leftism' (This seems to be more of a bizarre form of slur than any actual reasoned belief)
 - "From each according to his abilities to each according to his needs"
 - 'Marxism'
 - 'Market socialism' a la China
@@ -80,11 +79,11 @@ Communism
 - 'anarcho-communism'
 
 
-Socialism
+####Socialism
 - death camps (see 'Communism' below, and then see 'Stalinism', the Khmer Rouge or North Korea for an intro to this)
 - 'Communism' (Yes, some people think that Socialism is just a code word for Communism)
 - "an economic system characterized by social ownership or control of the means of production and cooperative management of the economy"
-- Redistributive taxation, social welfare programs, and government regulation (As occurs through the Scandanavian countries, and in various other Western countries already)
+- Redistributive taxation, social welfare programs, and government regulation (As occurs through the Scandinavian countries, and in various other Western countries already)
 - 'Marxist-Lenninism'
 - 'Libertarianism'
 - 'Libertarian socialism'
@@ -92,4 +91,6 @@ Socialism
 - 'Mutualism'
 - 'Social Democracy'
 - Any movement concerned with the social problems caused by the adaption of Capitalism in the 18th century.
+
+
 
