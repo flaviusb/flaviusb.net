@@ -17,7 +17,7 @@ An easy example here: Anarchy.
 
 First, the strawman meaning: violent lawlessness, with men in black masks smashing, burning and murdering with impunity.
 
-Then, the political science meaning, which Anarchists mean when they refer to Anarchism: not needing leaders or coercive social relations; a form of governance comprised of direct action and mutual aid, with the potential addition of direct democracy, personal property (as distinct from private property) and workers collectives amongst other things, and which completely rejects private property, the state, corporations, wage slavery and potentially various other things.
+Then, the political science meaning, which Anarchists mean when they refer to Anarchism: not needing leaders or coercive social relations; a form of governance comprised of direct action and mutual aid, with the potential addition of direct democracy, personal property (as distinct from private property) and workers collectives amongst other things; a system which completely rejects private property, the state, corporations, wage slavery and potentially various other things.
 
 The typical brushoff argument that those advocating Anarchism receive is: 'So you advocate a system that consists of everyone just wearing black masks and smashing things, eh? Well, that is bad, and also how would we have roads and food if people just wear black masks and smash things? Therefore you are wrong, and Anarchism is bad.'
 
@@ -37,4 +37,8 @@ Capitalism
 vs Mercantilism
 a naive 'Marketism'
 creative destruction
-a way of organising independent 
+a way of organising independent agents to act towards a common goal without coordination
+as a shorthand for some kind of 'corporatism' - usually not related to the political science definition of Corporatism
+Undead capital feeding on the lifeblood of living labour
+a system of rentiers, wage slavery, interest, dividends, capital as private property, and financial instruments used to 'create' a profit
+
