@@ -46,7 +46,7 @@ So, Anarchism was comparatively easy to talk about because few people have their
 
 ###The Big Three defined
 
-I present a short, incomplete and contradictory list of the things that people often refer to using the words Capitalism, Communism or Socialism below. My comments occur in brackets. If you ragequit when reading these lists, you are demonstrating the point of the rant.
+Now on to something harder; a rant in bullet point form, if you will. I present a short, incomplete and contradictory list of the things that people often refer to using the words Capitalism, Communism or Socialism below. My comments occur in brackets. If you ragequit when reading these lists, you are demonstrating the point of the rant.
 
 ####Capitalism
 - as vs Mercantilism (an actual historical perspective about the economic and political system as was relevant in the 18th century in Western Europe; discussions about balance of trade vs comparative advantage etc)
