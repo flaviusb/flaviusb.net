@@ -34,7 +34,7 @@ If we unpack that argument that purports to be a syllogism however, we get this 
 
 Boom, equivocation; the use of Anarchism in one part of the argument is different from the other, and for the argument to be valid the two uses have to be the same. The speaker explicitly rejects the strawman version of the thing (here Anarchism) with a reasonable argument, and then implicitly equivocates over the meaning of the word used to identify the thing in question to allow them to reject the actual version as well. One would think that stopping this would be as simple as saying:
 
-"Hang on now, Anarchism is a word that has several meanings, and the meaning that I refer to in my advocacy is the political science meaning, which is ..."
+"Hang on now, Anarchism is a word that has several meanings, and the meaning that I refer to in my advocacy is the political science meaning, which is different from the meaning you are arguing against here, like so..."
 
 Unfortunately, it isn't; hence, this long prelude to the real rant.
 
