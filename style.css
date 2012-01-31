@@ -11,8 +11,8 @@ h2 {
 h3 {
   font-size: 140%;
 }
-.post > ul {
-	list-style: dot;
+.post ul {
+	list-style: circle inside;
 	margin: 1em;
 }
 
