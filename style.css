@@ -8,6 +8,13 @@ h1 {
 h2 {
   font-size: 180%;
 }
+h3 {
+  font-size: 140%;
+}
+.post > ul {
+	list-style: dot;
+	margin: 1em;
+}
 
 .large {
   font-size: 120%;
