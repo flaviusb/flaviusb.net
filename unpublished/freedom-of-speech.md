@@ -8,6 +8,12 @@ tags:
 
 So, first off, I think that the idea of 'Freedom of Speech' is incoherent on usual readings, and under a more straightforward reading becomes quite different from what people actually want it to mean.
 
+Some things that it is used to mean, which I think are bad:
+
+###Freedom from consequence
+
+If you walk up to me in a bar and start shit talking me and won't stop, you may end up being sternly chastised, either by me, or by my friends who are annoyed on my behalf.
+
 ###Freedom to Hear
 
 
@@ -36,11 +42,11 @@ Countervailing forces
 
     Basically, there can be legal consequences for lying under oath.
 
-- Obscenity or Public Morality or Lese Majeste or Blasphemy or De-Nazification or etc laws.
+- Obscenity or Public Morality or Lese Majeste or Blasphemy or Hate Speech or De-Nazification or etc laws.
 
     I do not have much tolerance for these kinds of laws; they seem to be somewhat tolerable only in two different cases:
-    1. To create a 'safe' public sphere. That is, when they accurately reflect the actual, private feeling of a supermajority - not just the public seeming, and not just a majority or vocal minority - such that a non-representative group cannot cause almost everyone distress that they cannot escape from. This kind of thing can therefore only apply when the standards of 'decency' actually match what is privately acceptable to the supermajority, and can only apply to mass public communication where there is no opt in or opt out. So, billboards, public television during 'prime time', primary and secondary school, prominent locations in supermarkets or on utilities, and so forth. Private, opt-in and opt-out speech should all not be able to be affected.
-    2. For a clear public good unrelated to the law as such. For example, the Dutch have de-Nazification laws which are designed to block what amount to trolls whose speech is disruptive to the level of the public debate.
+    1. To create a 'safe' public sphere. That is, when they accurately reflect the actual, private feeling of a supermajority - not just the public seeming, and not just a majority or vocal minority - such that a non-representative group cannot cause almost everyone distress that they cannot escape from. This kind of thing can therefore only apply when the standards of 'decency' actually match what is privately acceptable to the supermajority, and can only apply to mass public communication where there is no opt in or opt out. So, billboards, public television during 'prime time', primary and secondary school, prominent locations in supermarkets or on utilities, and so forth. Private, opt-in and opt-out speech should all not be able to be affected by this case.
+    2. For a clear public good unrelated to the law as such. For example, the Dutch have de-Nazification laws which are designed to block what amount to trolls whose speech is disruptive to the level of the public debate. The de-Nazification laws of Franch and Germany are not about this; they are about keeping things which are dead and dreaming locked away. As such, the French and German de-Nazification laws do not fit in this case; I do not agree with them. Anti hate-speech laws which are enacted to prevent bullying and random assassinations rather than to protect people's delicate sensibilities would fall under this case: as they generally block speech which takes place in an opt-in or opt-out manner as well as taking place in mass public communications they could not be placed under case 1, above.
 
 - 'It isn't the speech as such that we are regulating' laws.
 

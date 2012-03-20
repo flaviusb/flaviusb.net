@@ -10,6 +10,9 @@ nsfw: true
 Drivers vs Identities.
 ----------------------
 
+For the purpose of this post, I will be using two more or less made up terms: drivers, and identities.
+
+
 - New Zealand's system largely works because each political party has policies and principles which people want because of their different drivers. 
 - America's system fails because each party is something that you are a part of, and the policies do not particularly flow from any one set of drivers that 100% of their membership has.
 
