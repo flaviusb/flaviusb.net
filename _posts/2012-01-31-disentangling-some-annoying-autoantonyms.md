@@ -90,7 +90,7 @@ Now on to something harder; a rant in bullet point form, if you will. I present 
 - Various forms of Anarchism
 - 'Mutualism'
 - 'Social Democracy'
-- Any movement concerned with the social problems caused by the adaption of Capitalism in the 18th century.
+- Any movement concerned with the social problems caused by the adoption of Capitalism in the 18th century.
 
 
 Now, it shouldn't need to be said, but this is merely a list of things that I have encountered other people claiming were the true and only meanings for the words listed; in an argument, I am much more interested in agreeing to a common vocabulary where all parties know what meaning is meant by all relevant words, and if necessary tabooing words that are contentious or making up alternative words which can have a well defined meaning, than I am in claiming specific words for myself. For example, when arguing about the place of Capitalism in the world, I like to split 'Capitalism' apart into different made up words that are not a confused jumble, such as market-ism, money-ism, bank-ism, rent-ism, corporation-ism. Whereas in a discussion of 'Capitalism' vs 'Communism' in terms of ideal ideology to rule the world, I would first reject that false dichotomy, and then want to split Capitalism up into at least vampire-capital-rent-etc-ism, creative-destruction-ism, money-ism, and distributed-decision-making-ism, such that these different things could actually be talked about as different things.
