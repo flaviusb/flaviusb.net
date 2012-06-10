@@ -12,7 +12,7 @@ This post was prompted by repeated headdesking caused by running into the same w
 Why Autoantonyms?
 -----------------
 
-In English, as in many languages, words can have several distinct, even contradictory meanings. A word that in some sense is its own opposite is an autoantonym; an example pointed out by[supergee](http://supergee.livejournal.com/2645438.html) is 'sanction', which can mean either explicit endorsement or forceful denial. Politics complicates this, with words being deliberately coopted, smeared, or set up as strawmwen, both with and without conscious intention. This promotes equivocation in arguments, which is really quite problematic; even worse, it tends to promote a kind of unconscious equivocation, and the things that give rise to this also make even trying to bring this to light in order to be able to actually have a conversation quite difficult.
+In English, as in many languages, words can have several distinct, even contradictory meanings. A word that in some sense is its own opposite is an autoantonym; an example pointed out by [supergee](http://supergee.livejournal.com/2645438.html) is 'sanction', which can mean either explicit endorsement or forceful denial. Politics complicates this, with words being deliberately coopted, smeared, or set up as strawmwen, both with and without conscious intention. This promotes equivocation in arguments, which is really quite problematic; even worse, it tends to promote a kind of unconscious equivocation, and the things that give rise to this also make even trying to bring this to light in order to be able to actually have a conversation quite difficult.
 
 ###A concrete example
 
