@@ -16,7 +16,7 @@ So, I have thought of a different way of looking at this kind of thing. 'Type st
 
 I am not certain how this will work in practice; the confusing legacy terminology still infests my thinking, and will probably continue to do so at least until I have found some better names for things[^3].
 
-[1]: Better name much desired.
-[2]: It may also mimic 'true' or 'false', or may 'meta-whatever' 'Truthy', in addition to the mimicing and 'meta-whatever' relations it picks up from mimicing '4'.
-[3]: ... and also have written a programming language that actually uses this kind of object model fully without the arbitrary limitations that secondarily necessitate brittle and specific koans.
+[^1]: Better name much desired.
+[^2]: It may also mimic 'true' or 'false', or may 'meta-whatever' 'Truthy', in addition to the mimicing and 'meta-whatever' relations it picks up from mimicing '4'.
+[^3]: ... and also have written a programming language that actually uses this kind of object model fully without the arbitrary limitations that secondarily necessitate brittle and specific koans.
 
