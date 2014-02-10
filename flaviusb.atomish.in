@@ -1,0 +1,40 @@
+#!/usr/bin/env preatomish
+
+#; Existence before essences
+flaviusb = '(Origin with(
+  handle:   :flaviusb,
+  name:     "Justin Marsh",
+  about:    "http://flaviusb.net/about",
+  writing:  {
+    :blog    ⇒ "http://flaviusb.net/blog",
+    :twitter ⇒ %w{@flaviusb http://flaviusb.net/tweets/},
+    :other   ⇒ "http://flaviusb.net/other/"
+  },
+  code:     "http://github.com/flaviusb",
+  projects: [
+    Work $(name: "Why So Ltd", website: "http://whyso.co.nz", description: "Android Apps for workflow problems"),
+    Code $(name: "Atomish", repo: "http://github.com/flaviusb/Atomish", description: "A small programming language, optimising for reification and meta-turtles."),
+    Larp $(name: "The Crucible", involvement: :Player, website: "http://cruciblelarp.com", character: "Saint Thomas Quirenius Ursa-il", twitter: "@UrLordThomas")
+  ],
+  aspects: {
+    Philosopher: {
+      schools:    %w{FormalLogic Analytic},
+      ethics:     %w{AnalyticDecompositionKantian NietzcheanNicomachean RuleEudaemonisticWorldConsequentialist},
+      aesthetics: /Lac(?:anian|onic)/
+    },
+    Programmer: {
+      languages: {
+        comfortable:  %w{Atomish Scala JavaScript Haskell Lisp Ioke C Ruby OCaml},
+        occasional:   %w{Shell Python Matlab Smalltalk Perl Vimscript},
+        yes:but:ugh:  %w{PHP Fortran Java C++}
+      }
+    }
+  }
+))
+
+#; One line stand in for a tagging system for projects, aspects, etc
+%w{Work Code Larp} map(name, {name ⇒ unquote(eval(''(fnx(+:kwargs, {`(name) ⇒ kwargs}))))}) each(thing, setCell(thing keys [0], unquote(eval(''(Origin with($: `(thing values [0])))))))
+
+flaviusb = unquote(flaviusb)
+
+say(print(flaviusb))
