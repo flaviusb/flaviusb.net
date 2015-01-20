@@ -19,13 +19,13 @@ flaviusb = '(Origin with(
   aspects: {
     Philosopher: {
       schools:    %w{FormalLogic Analytic},
-      ethics:     %w{AnalyticDecompositionKantian NietzcheanNicomachean RuleEudaemonisticWorldConsequentialist},
+      ethics:     %w{AnalyticDecompositionKantian NietzcheanNicomachean ProximateRuleEudaemonisticWorldConsequentialist},
       aesthetics: /Lac(?:anian|onic)/
     },
     Programmer: {
       languages: {
         comfortable:  %w{Atomish Scala JavaScript Haskell Lisp Ioke C Ruby OCaml},
-        occasional:   %w{Shell Python Matlab Smalltalk Perl Vimscript},
+        occasional:   %w{Shell Python Matlab Smalltalk Perl Vimscript Lua SQL},
         yes:but:ugh:  %w{PHP Fortran Java C++}
       }
     }
